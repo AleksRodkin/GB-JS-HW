@@ -16,10 +16,13 @@
 
 const dayNumber = +prompt("Введите целое число от 1 до 31: ");
 
-if (!Number.isInteger(dayNumber) || dayNumber == "") {
-  console.log("Ошибка. Введите целое число от 1 до 31");
-} else if (dayNumber < 1 || dayNumber > 31) {
-  console.log("Неверное значение. Введите целое число от 1 до 31");
+if (
+  !Number.isInteger(dayNumber) ||
+  dayNumber == "" ||
+  dayNumber < 1 ||
+  dayNumber > 31
+) {
+  console.log("Неверное значение.");
 } else {
   if (dayNumber >= 1 && dayNumber <= 10) {
     console.log(`Число ${dayNumber} попадает в 1 декаду месяца.`);
