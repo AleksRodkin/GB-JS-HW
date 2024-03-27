@@ -14,4 +14,20 @@
 число 32.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const dayNumber = +prompt("Введите целое число от 1 до 31: ");
+
+if (!Number.isInteger(dayNumber) || dayNumber == "") {
+  console.log("Ошибка. Введите целое число от 1 до 31");
+} else if (dayNumber < 1 || dayNumber > 31) {
+  console.log("Неверное значение. Введите целое число от 1 до 31");
+} else {
+  if (dayNumber >= 1 && dayNumber <= 10) {
+    console.log(`Число ${dayNumber} попадает в 1 декаду месяца.`);
+  } else if (dayNumber >= 11 && dayNumber <= 20) {
+    console.log(`Число ${dayNumber} попадает в 2 декаду месяца.`);
+  } else if (dayNumber >= 21 && dayNumber <= 31) {
+    console.log(`Число ${dayNumber} попадает в 3 декаду месяца.`);
+  } else {
+    console.log("Что-то пошло не так...");
+  }
+}
