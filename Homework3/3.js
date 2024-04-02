@@ -10,4 +10,12 @@
 три числа. Проверять их не нужно.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const a = Math.trunc(Math.random() * 100);
+const b = Math.trunc(Math.random() * 100);
+const c = Math.trunc(Math.random() * 100);
+
+function findMax(x, y, z) {
+  return `Максимальное значение среди чисел ${x}, ${y}, ${z} равно ${Math.max(x, y, z)}.`;
+}
+
+console.log(findMax(a, b, c));

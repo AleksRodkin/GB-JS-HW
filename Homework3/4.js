@@ -18,4 +18,30 @@ console.log(sum(2, 6)); должно вывести число 8 в консол
 Демонстрировать работы функций не обязательно.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+function sum(x, y) {
+  return `${x} + ${y} = ${x + y}`;
+}
+
+function diff(x, y) {
+  if (x > y) {
+    return `${x} - ${y} = ${x - y}`;
+  } else {
+    return `${y} - ${x} = ${y - x}`;
+  }
+}
+
+function mult(x, y) {
+  return `${x} * ${y} = ${x * y}`;
+}
+
+function div(x, y) {
+  return `${x} / ${y} = ${x / y}`;
+}
+
+const num1 = Math.trunc(Math.random() * 100);
+const num2 = Math.trunc(Math.random() * 100);
+
+console.log(sum(num1, num2));
+console.log(diff(num1, num2));
+console.log(mult(num1, num2));
+console.log(div(num1, num2));
