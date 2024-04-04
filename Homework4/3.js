@@ -14,4 +14,44 @@
 не окажется, значит нужно будет вывести пустой массив.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+function createArray(size) {
+  const arr = [];
+  for (let i = 0; i < size; i++) {
+    arr.push(Math.trunc(Math.random() * 10));
+  }
+  return arr;
+}
+
+function sumArray(array) {
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+  return sum;
+}
+
+function findMinInArray(array) {
+  let min = array[0];
+  for (let i = 1; i < array.length; i++) {
+    if (min > array[i]) {
+      min = array[i];
+    }
+  }
+  return min;
+}
+
+function findThrees(array) {
+  const foundIndexes = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === 3) {
+      foundIndexes.push(i);
+    }
+  }
+  return foundIndexes;
+}
+
+const newArray = createArray(5);
+console.log(newArray);
+console.log(sumArray(newArray));
+console.log(findMinInArray(newArray));
+console.log(findThrees(newArray));
