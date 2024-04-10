@@ -31,4 +31,17 @@ const products = [
   },
 ];
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+// 1 задание
+const productsWithPhotos = products.filter(function (product) {
+  if (product.photos !== undefined && product.photos.length !== 0) {
+    return product;
+  }
+});
+console.log(productsWithPhotos);
+
+// 2 задание
+products.sort(function(a, b) {
+  return a.price - b.price
+});
+console.log(products);
+
