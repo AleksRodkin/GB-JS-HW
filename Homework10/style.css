@@ -1,0 +1,24 @@
+.spawn {
+  width: 120px;
+  height: 32px;
+}
+
+.joke__container {
+  width: 400px;
+  margin-top: 20px;
+  border: 5px solid grey;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.separator {
+  border: 1px solid rgb(161, 161, 161);
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
