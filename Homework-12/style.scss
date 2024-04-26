@@ -1,0 +1,120 @@
+$containerVideoWidth: 910px;
+$containerVideoHeight: 512px;
+$controlsPaddingBottom: 16px;
+$controlsHeight: calc(68px + $controlsPaddingBottom);
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+	-webkit-animation: fade-out 0.3s ease-out both;
+	        animation: fade-out 0.3s ease-out both;
+}
+
+.fade-in {
+	-webkit-animation: fade-in 0.3s ease-out both;
+	        animation: fade-in 0.3s ease-out both;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containerForVideo {
+  position: absolute;
+  width: $containerVideoWidth;
+  height: $containerVideoHeight;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  z-index: -2;
+  margin-top: 32px;
+  margin-left: 32px;
+}
+
+video {
+  display: block;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.videoAboveControls {
+  position: absolute;
+  width: $containerVideoWidth;
+  height: calc($containerVideoHeight - $controlsHeight);
+  z-index: 2;
+}
+
+.controls {
+  display: block;
+  width: 100%;
+  position: absolute;
+  z-index: 4;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: calc($containerVideoHeight - $controlsHeight);
+  padding-bottom: $controlsPaddingBottom;
+
+  &__playPauseVolume {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+  }
+}
+
+.range {
+  width: 100%;
+}
+
+.play {
+  background-image: url(/Homework-12/player/play-button-svgrepo-com.svg);
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+}
+
+.pause {
+  background-image: url(./player/pause-button-svgrepo-com.svg);
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+}
+
+.time {
+  color: white;
+  display: flex;
+  align-items: center;
+}
