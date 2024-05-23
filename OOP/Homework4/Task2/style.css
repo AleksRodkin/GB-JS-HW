@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 16px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+figure {
+  background-color: #f2f4e8;
+  border: thin #c0c0c0 solid;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  width: 360px;
+}
+
+img {
+  max-width: 360px;
+  object-fit: cover;
+}
